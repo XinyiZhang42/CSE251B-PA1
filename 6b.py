@@ -141,7 +141,7 @@ def cross_entropy(x,y,weight):
     cost = np.multiply(-y,np.log(y_hat))
     #print("shape of cost",cost.shape)
     
-    error = np.sum(cost)/(4*len(x))
+    error = np.sum(cost)/(len(x))
     return error
 
 def gradientDescent(x,y,weight,learning_rate):
@@ -409,9 +409,10 @@ test_acc_final = np.mean(test_accuracy)
 print("The final accuracy is :",test_acc_final)
 
 
-# In[136]:
+# In[15]:
 
 
+#visualize weights
 weighted_PCs = []
 for i in range(4):
     weighted_PCs.append(np.matmul(top_eigen_vectors[:,0:100],weight[1:101,i]).reshape((200,300)))

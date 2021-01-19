@@ -384,6 +384,7 @@ print("The final accuracy is :",test_acc_final)
 # In[38]:
 
 
+#plot rows of the confusion matrix
 def confusion(x,y,weight):
     #x = np.asmatrix(x)
     #y = np.asmatrix(y)
